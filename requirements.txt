@@ -1,2 +1,4 @@
 requests
 pprint
+black
+pylama
