@@ -2,3 +2,4 @@ requests
 pprint
 black
 pylama
+colorama
