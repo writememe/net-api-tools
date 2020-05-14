@@ -24,8 +24,8 @@ url = "http://localhost:5000"
 # Define the API path
 api_path = "/api/nr/scrapli/host?host="
 command_api_path = "&command="
-# The command to be parsed. Use %20 for spaces
-command = "show%20archive%20config%20differences%20nvram:startup-config%20system:running-config"
+# The command to be parsed.
+command = "show archive config differences nvram:startup-config system:running-config"
 # Set indentation on pretty print
 pp = pprint.PrettyPrinter(indent=2)
 
