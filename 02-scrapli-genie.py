@@ -22,7 +22,7 @@ hostname = args.host
 # Define the URL
 url = "http://localhost:5000"
 # Define the API path
-api_path = "/api/nr/scrapli/host?host="
+api_path = "/api/nr/scrapli/genie/host?host="
 command_api_path = "&command="
 # The command to be parsed.
 command = "show archive config differences nvram:startup-config system:running-config"

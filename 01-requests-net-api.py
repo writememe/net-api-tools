@@ -13,7 +13,7 @@ hostname = "lab-csr-01.lab.dfjt.local"
 # Define the URL
 url = "http://localhost:5000"
 # Define the API path
-user_host_api = "/api/nr/users/host?host="
+user_host_api = "/api/nr/napalm/users/host?host="
 # Define a list of allowed usernames
 allowed_users = ["admin", "svc-ansible", "svc-netbox-napalm"]
 # Set indentation on pretty print
