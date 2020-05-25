@@ -44,4 +44,4 @@ pytest: ## Perform testing using pytest
 .PHONY:	pytest-gh-actions
 pytest-gh-actions: ## Perform testing using pytest on Github Actions
 	@echo "--- Performing pytest on Github Action ---"
-	pytest . --ignore=tests/ --cov-report term-missing -vs --pylama . --cache-clear -vvvvv
+	pytest . --cov-report term-missing -vs --pylama . --cache-clear -vvvvv

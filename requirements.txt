@@ -5,3 +5,5 @@ pylama
 colorama
 yamllint
 bandit
+pytest
+pytest-cov
