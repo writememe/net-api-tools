@@ -3,3 +3,5 @@ pprint
 black
 pylama
 colorama
+yamllint
+bandit
