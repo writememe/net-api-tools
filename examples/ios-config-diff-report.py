@@ -31,7 +31,7 @@ print(Fore.CYAN + f"Validating config differences on {args.host}")
 hostname = args.host
 # Define variables
 # Define the URL
-url = "http://localhost:5000"
+url = "http://10.0.0.54:5000"
 # Define the API path
 api_path = "/api/nr/scrapli/genie/host?host="
 command_api_path = "&command="
@@ -52,8 +52,8 @@ try:
     req = requests.get(url + api_path + hostname + command_api_path + command)
     # If debug is set to True, printout the status code and the raw text response
     if args.debug is True:
-        print(Fore.MAGENTA + f"Response Code - {req.status_code}")
-        print(Fore.MAGENTA + f"Response Raw Text - {req.text}")
+        print(Fore.MAGENTA + f"Response code - {req.status_code}")
+        print(Fore.MAGENTA + f"Response raw text - {req.text}")
     # If the response was successful, no exception will be raised
     req.raise_for_status()
 # Raise exception, print HTTP error
