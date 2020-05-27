@@ -33,7 +33,7 @@ hostname = args.host
 # Define the URL
 url = "http://10.0.0.54:5000"
 # Define the API path
-api_path = "/api/nr/scrapli/genie/host?host="
+api_path = "/api/v1/nr/scrapli/genie/host?host="
 command_api_path = "&command="
 # The command to be parsed.
 command = "show archive config differences nvram:startup-config system:running-config"
