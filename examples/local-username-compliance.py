@@ -3,17 +3,36 @@ import requests
 import pprint
 from requests.exceptions import HTTPError
 from colorama import Fore, init
+import argparse
 
 # Auto-reset colorama colours back after each print statement
 init(autoreset=True)
 
-# Define variables
-# Define the hostname to be queried
-hostname = "lab-csr-01.lab.dfjt.local"
+# Setup argparse parameters to take user input from the command line
+parser = argparse.ArgumentParser(
+    description="Validate local username(s) compliance on given host."
+)
+parser.add_argument(
+    "--host",
+    action="store",
+    help="Specify the hostname to be queried i.e. lab-host-01.lab.local",
+    type=str,
+)
+# Add debug argument, set to False by default unless required
+parser.add_argument(
+    "--debug",
+    action="store_true",
+    help="Provide additional debugging output. True for debugging, set to False by default",
+)
+args = parser.parse_args()
+
+print(Fore.CYAN + f"Validating local usernames on {args.host}")
+# Take argparse input and assign to the hostname variable
+hostname = args.host
 # Define the URL
-url = "http://localhost:5000"
+url = "http://10.0.0.54:5000"
 # Define the API path
-user_host_api = "/api/nr/napalm/users/host?host="
+api_path = "/api/nr/napalm/users/host?host="
 # Define a list of allowed usernames
 allowed_users = ["admin", "svc-ansible", "svc-netbox-napalm"]
 # Set indentation on pretty print
@@ -21,8 +40,15 @@ pp = pprint.PrettyPrinter(indent=2)
 
 # Try/except block to validate a successful HTTP response code
 try:
+    # If debug is set to True, provide the full API call string
+    if args.debug is True:
+        print(Fore.MAGENTA + f"Attempting API call - {url}{api_path}{hostname}")
     # Get the results of the API call
-    req = requests.get(url + user_host_api + hostname)
+    req = requests.get(url + api_path + hostname)
+    # If debug is set to True, printout the status code and the raw text response
+    if args.debug is True:
+        print(Fore.MAGENTA + f"Response code - {req.status_code}")
+        print(Fore.MAGENTA + f"Response raw text - {req.text}")
     # If the response was successful, no exception will be raised
     req.raise_for_status()
 # Raise exception, print HTTP error
