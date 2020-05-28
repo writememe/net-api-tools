@@ -22,8 +22,7 @@ All examples are contained within the [examples/](examples/) directory. Below is
 | ------- | --------------- | ---------------- |
 | Local username compliance | Validate that the local usernames defined on a host exactly match a pre-defined list | [local-username-compliance.py](examples/local-username-compliance.py)|
 | Running config versus startup config report | Validate that there are no differences between the running and startup config on an IOS host |[ios-config-diff-report.py](examples/ios-config-diff-report.py) |
-| All host NTP server compliance | Validate that all NTP servers defined on all hosts exactly match a pre-defined list |[all-ntp-servers.py](examples/
-all-ntp-servers.py) |
+| All host NTP server compliance | Validate that all NTP servers defined on all hosts exactly match a pre-defined list |[all-ntp-servers.py](examples/all-ntp-servers.py) |
 
 **NOTE: All the examples provided are supported using Python 3.6 or higher**
 
