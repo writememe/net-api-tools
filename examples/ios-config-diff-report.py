@@ -1,3 +1,17 @@
+"""
+This application will compare the running configuration against
+the startup configuration and print the difference to the screen.
+
+To adjust this to your environment, please change the `url` variable
+ within the code.
+
+To execute this code, please run the following command:
+
+python ios-config-diff-report.py --help
+
+This will display what are the options to execute the application.
+"""
+
 # Import modules
 import requests
 import pprint

@@ -1,3 +1,18 @@
+"""
+This application will validate all NTP servers on all hosts defined
+on `net-api` against a pre-defined list and print successes and/or
+failures.
+
+To adjust this to your environment, please change the `url` variable
+and the `allowed_ntp_servers` variable within the code.
+
+To execute this code, please run the following command:
+
+python all-ntp-servers.py --help
+
+This will display what are the options to execute the application.
+"""
+
 # Import modules
 import requests
 import pprint
