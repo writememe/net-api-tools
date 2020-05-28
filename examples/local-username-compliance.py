@@ -32,7 +32,7 @@ hostname = args.host
 # Define the URL
 url = "http://10.0.0.54:5000"
 # Define the API path
-api_path = "/api/nr/napalm/users/host?host="
+api_path = "/api/v1/nr/napalm/users/host?host="
 # Define a list of allowed usernames
 allowed_users = ["admin", "svc-ansible", "svc-netbox-napalm"]
 # Set indentation on pretty print

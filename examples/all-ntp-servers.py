@@ -24,7 +24,7 @@ print(Fore.CYAN + "Collecting NTP servers, please wait ...")
 # Define the URL
 url = "http://10.0.0.54:5000"
 # Define the API path
-api_path = "/api/nr/napalm/ntp_servers/all"
+api_path = "/api/v1/nr/napalm/ntp_servers/all"
 # Define a list of allowed NTP servers
 allowed_ntp_servers = ["10.0.0.1", "8.8.8.8"]
 # Set indentation on pretty print
