@@ -119,6 +119,6 @@ else:
         print(Fore.GREEN + "Compliant user list : " + str(allowed_users))
         print(Fore.GREEN + "Actual user list : " + str(configured_users))
     else:
-        print(Fore.RED + "FAILURE : The configured users are compliant")
+        print(Fore.RED + "FAILURE : The configured users are NOT compliant")
         print(Fore.RED + "Compliant user list : " + str(allowed_users))
         print(Fore.RED + "Actual user list : " + str(configured_users))
