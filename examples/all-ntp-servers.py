@@ -117,7 +117,7 @@ else:
                 Fore.RED
                 + f"FAILURE : The configured NTP servers are NOT compliant on {host}"
             )
-            print(Fore.RED + "Compliant user list : " + str(allowed_ntp_servers))
-            print(Fore.RED + "Actual user list : " + str(configured_ntp_servers))
+            print(Fore.RED + "Compliant server list : " + str(allowed_ntp_servers))
+            print(Fore.RED + "Actual server list : " + str(configured_ntp_servers))
         # Demarcation print
         print("=" * 80)
