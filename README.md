@@ -32,4 +32,4 @@ I will try to populate more examples as time dictates, however if you would like
 
 The more examples and use cases that are generated, the more useful the tool is for others throughout the community. 
 
-If you need some help on how or where to start, please let me know.
+If you need some help on how or where to start, please let me know. Thanks
